@@ -8,6 +8,7 @@ public class SimpleCalculator {
         Scanner scanner = new Scanner(System.in);
         int answer = 0;
 
+        // Put a throw Exception if the user inputted a wrong input, it will request to input again by the user.
         try {
             while (true) {
                 System.out.print("Please Enter your First Number: ");
@@ -15,23 +16,29 @@ public class SimpleCalculator {
                 System.out.print("Please Enter your Second Number: ");
                 int num2 = scanner.nextInt();
 
+                // Choosing of what operator should the program use
                 System.out.print("Please Choose your Operator( + , - , / , * ): ");
                 String operator = scanner.next();
 
+                // A condition statement where it will base on the operator, and it will provide the formula
                 switch (operator) {
-                    case "+":
+                    case "+": // Addition
                         answer = num1 + num2;
                         break;
-                    case "-":
+                    case "-": // Subtraction
                         answer = num1 - num2;
                         break;
-                    case "/":
+                    case "/": // Division
                         answer = num1 / num2;
                         break;
-                    case "*":
+                    case "*": // Multiplication
                         answer = num1 * num2;
                         break;
+                    default:
+                        System.out.println("Invalid Input.");
+                        break;
                 }
+                // Will print the answer
                 System.out.println("\nThe Answer with your operator " + operator + " is " + answer);
 
                 while (true) {
