@@ -7,6 +7,7 @@ public class NumberGuessingGame {
     public static void main(String[] args) {
         // I initialize first the userNumber variable after all, it is not guaranteed that it will have a value
         int userNumber = 0;
+        int attempt = 0;
         // imported java libraries
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -16,12 +17,16 @@ public class NumberGuessingGame {
             int computerNumber = random.nextInt(100);
             // I use do while loop so It will print first the guess number even if the inputted first was correct or not
             do {
+                // will record the attempt or each loop
+                attempt++;
                 System.out.print("Guess a Number between 1 to 100: ");
                 userNumber = scanner.nextInt();
 
                 // this will print if the guessed of the user is correct
                 if (userNumber == computerNumber) {
                     System.out.println("\nYour Guess is Right!! It is " + computerNumber);
+                    // will print how many loops or attempt does the user had
+                    System.out.println("Your number of attempts is "+attempt);
                 } else if (userNumber < computerNumber) {
                     // will print if the guess of the user is too low
                     System.out.println("Too Low. Please Try Again.");
