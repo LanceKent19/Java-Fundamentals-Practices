@@ -4,11 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class RockPaperScissor {
-    public static void main(String[] args) {
-        // Scanner Class to let the user input values
-        Scanner scanner = new Scanner(System.in);
-        // A Random class to generate random numbers
-        Random random = new Random();
+    public static void rockPaperScissorStart(Scanner scanner, Random random) {
         String playerMove = "";
         int playersScore=0;
         int computersScore=0;
@@ -74,7 +70,7 @@ public class RockPaperScissor {
                     String continueProgram = scanner.next();
                     // will exit the program
                     if (continueProgram.equals("n")) {
-                        System.out.println("Thank you for using our System. Goodbye!");
+                        System.out.println("Going back to the Main Menu.....");
                         return; // exit the program if it is in the main method
                     }else if (!continueProgram.equals("y")){
                         // if it is not y or yes, will invalidate and ask again the user for input, loop again
@@ -84,8 +80,6 @@ public class RockPaperScissor {
                         break;
                     }
                 }
-
-
         }
     }
 }

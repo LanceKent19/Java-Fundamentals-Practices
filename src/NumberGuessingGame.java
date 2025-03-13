@@ -4,13 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class NumberGuessingGame {
-    public static void main(String[] args) {
+    public static void numberGuessingGame(Scanner scanner, Random random) {
         // I initialize first the userNumber variable after all, it is not guaranteed that it will have a value
         int userNumber = 0;
         int attempt = 0;
-        // imported java libraries
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
 
         while (true) {
             // the random number generator using Random Class
@@ -42,6 +39,7 @@ public class NumberGuessingGame {
                 String continueProgram = scanner.next();
                 // if n or no, it will go to the return statement or will exit the program if it is in the main method
                 if (continueProgram.equals("n")) {
+                    System.out.println("Going back to the Main Menu.....");
                     return;
                 } else if (!continueProgram.equals("y")) {
                     // will just loop of asking if the user wish to continue if the input is neither of the choices

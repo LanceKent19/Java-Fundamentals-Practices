@@ -3,8 +3,7 @@ package src;
 import java.util.Scanner;
 
 public class Palindrome {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void palindromeStart(Scanner scanner) {
         // String reverseName = new StringBuilder(name).reverse().toString(); -- use this code if you want a built-in reverse name
 
         // the variable that the name will be stored f it is reversed.
@@ -15,7 +14,7 @@ public class Palindrome {
         while (true) {
             // asking the user to input a word
             System.out.print("Please Enter a Word: ");
-            String name = scanner.nextLine();
+            String name = scanner.next();
             //   I did -1 here because the length is no the same reading or count as the index.
             for (int i = name.length() - 1; i >= 0; --i) { // the code block will loop until the index reaches 0 and also it is decremental
                 reverseName = reverseName + name.charAt(i); // I will store it in the reverseName variable of the current value of reversename concatenate the characters of the name
@@ -37,6 +36,7 @@ public class Palindrome {
                 String continueProgram = scanner.nextLine();
                 // if no, it will return or stop the program
                 if (continueProgram.equals("n")) {
+                    System.out.println("Going back to the Main Menu.....");
                     return;
                 } else if (!continueProgram.equals("y")) {
                     // if the input is aside from y, it will invalidate and loop again the question

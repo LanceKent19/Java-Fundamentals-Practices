@@ -2,8 +2,7 @@ package src;
 import java.util.Scanner;
 
 public class LargestNumberArray {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void largestNumberArrayStart(Scanner scanner) {
         // a variable that will count the attempts of the array numbers
         int count =0;
 
@@ -52,6 +51,7 @@ public class LargestNumberArray {
                 String continueProgram = scanner.next();
 
                 if (continueProgram.equals("n")) {
+                    System.out.println("Going back to the Main Menu.....");
                     return;
                 }else if (!continueProgram.equals("y")){
                     System.out.println("Invalid Input. Please Try Again");

@@ -3,8 +3,7 @@
     import java.util.Scanner;
 
     public class OperationTable {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+        public static void operationTableStart(Scanner scanner) {
             // need to Initialize after all, the program doesn't guarantee if there is a value in answer
             int answer = 0;
             while (true) {
@@ -43,8 +42,7 @@
                     String continueProgram = scanner.next();
 
                     if (continueProgram.equals("n")) {
-                        // Will exit the program
-                        System.out.println("Thank you for using our Program. Goodbye!!");
+                        System.out.println("Going back to the Main Menu.....");
                         return;
                     } else if (!continueProgram.equals("y")) {
                         // will loop again

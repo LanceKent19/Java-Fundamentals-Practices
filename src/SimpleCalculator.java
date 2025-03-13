@@ -4,8 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SimpleCalculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void simpleCalculatorStart(Scanner scanner) {
         int answer = 0;
 
         // Put a throw Exception if the user inputted a wrong input, it will request to input again by the user.
@@ -46,6 +45,7 @@ public class SimpleCalculator {
                     String continueProgram = scanner.next();
 
                     if (continueProgram.equals("n")) {
+                        System.out.println("Going back to the Main Menu.....");
                         return;
                     }else if(!continueProgram.equals("y")){
                         System.out.println("Invalid Input. Please Try Again!!");
